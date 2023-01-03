@@ -30,9 +30,6 @@ public class OrderReceiverService {
         System.out.println(items.toString());
         System.out.println(itemsInOrder);
 
-//        String rhyme = "Humpty Dumpty sat on a wall.%nHumpty Dumpty had a great fall.";
-//        System.out.println(rhyme);
-//
         String body = "Здравствуйте, " + order.getDeliveryName() + "," + System.lineSeparator() + System.lineSeparator() +
                       "Мы получили Ваш заказ и сейчас он находится в обработке." + System.lineSeparator() + System.lineSeparator() +
                       "Вы заказали:" + System.lineSeparator() + System.lineSeparator() +
