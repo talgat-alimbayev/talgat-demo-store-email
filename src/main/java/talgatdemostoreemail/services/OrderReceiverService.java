@@ -23,7 +23,6 @@ public class OrderReceiverService {
         String toEmail = order.getEmail();
         System.out.println(toEmail);
         String subject = "Ваш заказ на Talgat's demo store";
-//
         List<Item> items = itemServices.getItemsById(order.getItemIds().stream().toList());
         String itemsInOrder = items.stream().map(Item::getName)
                                 .collect(Collectors.joining(System.lineSeparator()));
@@ -36,7 +35,6 @@ public class OrderReceiverService {
                        itemsInOrder + System.lineSeparator() + System.lineSeparator() +
                        "С уважением," + System.lineSeparator() +
                        "Talgat's demo store";
-//
         emailSender.sendEmail(toEmail, subject, body);
     }
 }
