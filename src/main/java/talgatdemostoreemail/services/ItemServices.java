@@ -22,7 +22,7 @@ public class ItemServices {
         ObjectMapper mapper = new ObjectMapper();
 
         return mapper.convertValue(
-                rest.getForObject("http://localhost:8080/api/items?ids={id}", List.class, listOfIds),
+                rest.getForObject("http://backend:8080/api/items?ids={id}", List.class, listOfIds),
                 new TypeReference<List<Item>>() {});
     }
 
