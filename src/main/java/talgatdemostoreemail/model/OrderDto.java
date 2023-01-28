@@ -2,18 +2,17 @@ package talgatdemostoreemail.model;
 
 import lombok.Data;
 
-import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
-public class Order {
+public class OrderDto {
     private Long id;
     private String deliveryAddress;
     private String deliveryName;
     private String email;
-    private Set<Long> itemIds = new HashSet<>();
-    private BigDecimal orderTotal;
+    private List<ItemOrderDto> items = new ArrayList<>();
     private String comment;
+    private Long userId;
 }
 
